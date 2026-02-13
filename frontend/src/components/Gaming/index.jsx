@@ -49,7 +49,7 @@ const Gaming = () => {
   const getVideos = async () => {
     setApiStatus(apiStatusConstants.apiLoadingView);
     const jwtToken = Cookies.get("jwt_token");
-    const apiUrl = "http://localhost:4000/gaming/getGamingVideos";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/gaming/getGamingVideos`;
 
     const options = {
       method: "GET",

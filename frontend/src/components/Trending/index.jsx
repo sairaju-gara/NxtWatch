@@ -49,7 +49,7 @@ const Trending = () => {
   const getVideos = async () => {
     setApiStatus(apiStatusConstants.apiLoadingView);
     const jwtToken = Cookies.get("jwt_token");
-    const apiUrl = "http://localhost:4000/trending/getTrendingVideos";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/trending/getTrendingVideos`;
 
     const options = {
       method: "GET",

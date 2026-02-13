@@ -55,7 +55,7 @@ const VideoItemDetails = (props) => {
   const getVideoDetails = async () => {
     const jwtToken = Cookies.get("jwt_token");
     const { id } = props.params;
-    const apiUrl = `http://localhost:4000/videos/${id}`;
+    const apiUrl = `${import.meta.env.VITE_API_URL}/videos/${id}`;
 
     const response = await fetch(apiUrl, {
       method: "GET",

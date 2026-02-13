@@ -57,7 +57,7 @@ const Register = () => {
 
   const getLogin = async (event) => {
     event.preventDefault();
-    const apiUrl = "http://localhost:4000/nxtwatch/register";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/nxtwatch/register`;
     const userDetails = { username, password, email, phoneNumber };
     const options = {
       method: "POST",

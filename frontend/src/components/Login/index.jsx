@@ -53,7 +53,7 @@ const Login = () => {
 
   const getLogin = async (event) => {
     event.preventDefault();
-    const apiUrl = "http://localhost:4000/nxtwatch/login";
+    const apiUrl = `${import.meta.env.VITE_API_URL}/nxtwatch/login`;
     const userDetails = { email, password };
     const options = {
       method: "POST",
