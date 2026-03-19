@@ -12,12 +12,18 @@ const GamingVideo = require("./models/GamingVideo");
 const UserRoute = require("./routes/userRoute");
 const app = express();
 app.use(express.json());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://nxt-watch-pgjo.vercel.app",
+];
+
 app.use(
   cors({
-    origin: "https://nxt-watch-pgjo.vercel.app",
+    origin: allowedOrigins,
     credentials: true,
   }),
 );
+
 dotEnv.config();
 const port = process.env.PORT || 4000;
 
